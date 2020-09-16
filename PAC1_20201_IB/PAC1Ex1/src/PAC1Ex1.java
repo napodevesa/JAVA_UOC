@@ -1,16 +1,22 @@
+import java.util.Scanner;
 
 public class PAC1Ex1 {
+	
+	static Scanner lector = new Scanner (System.in);
+    static double fahrenheit;
 
 	public static void main(String[] args) {
-		\* 96.8 ºF son 36 ºC */ 
-		doble fahrenheit = 96.8, celsius;
+		// 96.8 Â°F son 36 Â°C // 
 		
-		Celsius = f2c(fahrenheit) - 5;
+		System.out.println("Introduce ÂºF");
+		fahrenheit = lector.nextDouble();
+
+		double celsius = f2c(fahrenheit);
 		
-		System.out.pritn(celsius + "ºF = "+fahrenehit +"ºC");
+		System.out.print("El resultado es el siguiente: " + celsius + "Â°C = "+ fahrenheit +"Â°F");
 	}
 	
 	public static double f2c(double f) {
-		return f - 32 * 5 / 9;		
+		return (f - 32) * 5 / 9;		
 	}
 }
