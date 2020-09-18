@@ -27,15 +27,15 @@ public class PAC1Ex2 {
 		income = 0;
 		}
 		
-		if (income>20000 && income <=40000) {
-			income =  20000 * 0+ (income - 20_000) * 0.1;
+		if (income>20000 && income <= 40000) {
+			income =  20000 * 0 + (income - 20_000) * 0.1;
 		}
 		if (income>40000 && income <=60000) {
-			income =  20000 * 0.1+ (income - 40_000) * 0.2;
+			income =  20000 * 0.1 + (income - 40_000) * 0.2;
 		} 
 		
 		if (income>60000) {
-			income= 20000 * 0.1 + 20000*0.2 + (income - 60000) * 0.3;
+			income= 20000 * 0.1 + 20000 * 0.2 + (income - 60000) * 0.3;
 		}
 	
 		return income;
@@ -43,7 +43,22 @@ public class PAC1Ex2 {
 	}
 	
 	public static double pensionContribution(double salary) {
-		return salary;
+		
+		int n = (int)(salary/200);
+		float suma = 0;
+		float tasa = 0;
+		float sumaFinal = 0;
+		
+		 for (int i = 0; i<n; i++ ) {
+			
+
+			 suma = (float) (salary * tasa); 
+			 tasa = (float) (tasa + 0.01);
+			 sumaFinal+=suma;
+		 }
+		
+		
+		 return sumaFinal  ;
 			
 	}
 }
