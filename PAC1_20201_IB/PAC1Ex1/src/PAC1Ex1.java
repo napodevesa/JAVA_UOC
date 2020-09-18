@@ -2,8 +2,9 @@
 public class PAC1Ex1 {
 
 	public static void main(String[] args) {
-		// 96.8 °F son 36 °C //
-		double fahrenheit = 96.8, celsius;
+		// 96.8 °F son 36 °C 
+		double fahrenheit = 96.8;
+		double celsius;
 		
 		celsius = f2c(fahrenheit) - 5;
 		

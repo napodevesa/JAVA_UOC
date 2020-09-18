@@ -15,17 +15,35 @@ public class PAC1Ex2 {
 		incomeTax = incomeTaxPayable(income);
 		pensionContribution = pensionContribution(income/14);
 		
-		System.out.printf("\nThe income tax payable is: %.2f €",incomeTax);
-		System.out.printf("\nThe pension contribution is: %f €",pensionContribution);
+		System.out.printf("\nThe income tax payable is: %.2f ",incomeTax);
+		System.out.printf("\nThe pension contribution is: %f ",pensionContribution);
 		
 		input.close();
 	}
 	
 	public static double incomeTaxPayable(double income) {
-		//TODO
+		
+		if (income > 0 && income<=20000) {
+		income = 0;
+		}
+		
+		if (income>20000 && income <=40000) {
+			income =  20000 * 0+ (income - 20_000) * 0.1;
+		}
+		if (income>40000 && income <=60000) {
+			income =  20000 * 0.1+ (income - 40_000) * 0.2;
+		} 
+		
+		if (income>60000) {
+			income= 20000 * 0.1 + 20000*0.2 + (income - 60000) * 0.3;
+		}
+	
+		return income;
+			 
 	}
 	
 	public static double pensionContribution(double salary) {
-		//TODO	
+		return salary;
+			
 	}
 }
