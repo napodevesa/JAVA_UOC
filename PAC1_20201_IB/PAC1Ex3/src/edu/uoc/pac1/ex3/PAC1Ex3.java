@@ -1,5 +1,4 @@
 package edu.uoc.pac1.ex3;
-
 import java.util.Arrays;
 
 public class PAC1Ex3 {
@@ -13,23 +12,21 @@ public class PAC1Ex3 {
 	public static int[] subVector(int[] vector) {	
 		
 		boolean even= true;
-		
-		int[] vector1 = new int[lengthSubVector(vector,even)];
-		
+		int[] newVector = new int[lengthSubVector(vector,even)];
 		int contador=0;
 		
-		if (vector == null) {
+		if (vector.length == 0) {
 			System.out.println ("[ERROR] Vector is null");
 			
 		}
 		
 		
-		if (vector != null) {
+		if (vector.length != 0) {
 			
 				if (vector[0]%2==0) {
 					for (int i = 0; i < vector.length; i++) {
 						if (vector[i]%2==0) {
-							vector1[i]=vector[i];
+							newVector[i]=vector[i];
 						}
 					}
 					contador+=1;
@@ -38,22 +35,23 @@ public class PAC1Ex3 {
 				if (vector[0]%2!=0) {
 					for (int i = 0; i < vector.length; i++) {
 						if (vector[i]%2!=0) {
-							vector1[i]=vector[i];
+							newVector[i]=vector[i];
 						}
 					}
 					contador+=1;
 				}
-				return vector1;
+				return newVector;
 		}	
 }
 
 	
 	public static int lengthSubVector(int[] vector, boolean even) {
 		int contador = 0;
-		
-		if (vector == null) {
+		 
+        if (vector.length == 0) {
+        	
 			System.out.println ("[ERROR] Vector is null");
-			return contador;
+			//return contador;
 		}else {
 			for (int i = 0; i < vector.length; i++) {
 				
