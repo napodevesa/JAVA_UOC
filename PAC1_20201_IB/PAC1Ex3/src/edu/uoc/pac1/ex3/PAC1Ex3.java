@@ -5,21 +5,18 @@ public class PAC1Ex3 {
 
 	public static void main(String[] args) {
 		int[] vector = {2,3,4,5,6};
+		//boolean even= false;
+		//lengthSubVector(vector, even);
+		//System.out.println(lengthSubVector(vector, even));
+		//System.out.println(subVector(vector));
 		
-		boolean even= false;
-		lengthSubVector(vector, even);
-		
-		System.out.println(lengthSubVector(vector, even));
-		System.out.println(subVector(vector));
-		
-		//System.out.println(Arrays.toString(subVector(vector)));
+		System.out.println(Arrays.toString(subVector(vector)));
 	}
 	
 	public static int[] subVector(int[] vector) {	
 		
 		int j=0;
-		boolean even=true;
-		
+		boolean even = true;
 		int[] subVector = new int[lengthSubVector(vector, even)];
 		
 		if (vector.length == 0) {
@@ -51,7 +48,6 @@ public class PAC1Ex3 {
 	
 	public static int lengthSubVector(int[] vector, boolean even) {
 		int contador = 0;
-
 		        if (vector.length == 0) {
 		        	
 					System.out.println ("[ERROR] Vector is null");
