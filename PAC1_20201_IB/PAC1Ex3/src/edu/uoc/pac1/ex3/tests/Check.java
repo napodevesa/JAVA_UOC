@@ -1,7 +1,6 @@
 package edu.uoc.pac1.ex3.tests;
 
 import edu.uoc.pac1.ex3.PAC1Ex3;
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 

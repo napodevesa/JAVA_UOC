@@ -21,7 +21,7 @@ public class PAC1Ex3 {
 			
 		}
 		
-		if (vector.length == 0) {
+		if (vector.length > 0) {
 			System.out.println ("[ERROR] Vector is null");
 			return null;
 		}
@@ -69,11 +69,11 @@ public class PAC1Ex3 {
 					for (int i = 0; i < vector.length; i++) {
 							int x = vector[i];
 				
-							while (even == true) {
+							if (even == true) {
 									if (x%2 == 0);
 									contador += 1;
 							}
-							while (even == false) { 
+							if (even == false) { 
 								if (x%2 != 0);
 								contador += 1;
 							}
