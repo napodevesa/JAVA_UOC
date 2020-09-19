@@ -7,7 +7,6 @@ public class PAC1Ex3 {
        
 		int[] vector = {2,3,4,5,6};
 		System.out.println(Arrays.toString(subVector(vector)));
-	
 		
 	}
 	
@@ -55,7 +54,7 @@ public class PAC1Ex3 {
 		
 		if (vector == null) {
 			System.out.println ("[ERROR] Vector is null!!");
-			contador = 0;
+			return 0;
 		}
 		       
 		if (vector.length == 0 ) {
