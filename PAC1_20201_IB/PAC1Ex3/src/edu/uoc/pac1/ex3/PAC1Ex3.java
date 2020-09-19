@@ -10,40 +10,42 @@ public class PAC1Ex3 {
 		lengthSubVector(vector, even);
 		
 		System.out.println(lengthSubVector(vector, even));
+		System.out.println(subVector(vector));
 		
 		//System.out.println(Arrays.toString(subVector(vector)));
 	}
 	
 	public static int[] subVector(int[] vector) {	
 		
-		//boolean even= true;
-		int[] newVector = new int[5];
+		int j=0;
+		boolean even=true;
+		
+		int[] subVector = new int[lengthSubVector(vector, even)];
 		
 		if (vector.length == 0) {
 			System.out.println ("[ERROR] Vector is null");
 		}
 		
-		while (vector.length > 0) {
-					if (vector[0]%2==0) {
-							for (int i = 0; i < vector.length; i++) {
-								if (vector[i]%2==0) {
-									newVector[i]=vector[i];
-								}
-							}
-					
-					}else {
+		if (vector.length > 0) {
+			for (int i=0; i<vector.length; i++) {
 				
-						if (vector[0]%2!=0) {
-								for (int i = 0; i < vector.length; i++) {
-									if (vector[i]%2!=0) {
-										newVector[i]=vector[i];
-									}
-								}
-						}	
-					}
-		}
-		return newVector;
-					
+				if (vector[0]%2==0 && vector[i]%2==0) {
+						subVector[j]=vector[i];
+						j++;
+				
+				}
+			
+		
+				if (vector[0]%2!=0 && vector[i]%2!=0) {
+					subVector[j]=vector[i];
+					j++;
+			
+				}
+			
+			}
+	}
+							
+		return subVector;					
 	}	
 
 	
